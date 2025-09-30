@@ -4,6 +4,8 @@
   "description": "Este projeto corresponde à primeira parte do trabalho prático da disciplina, com foco na aplicação do padrão arquitetural **MVC** e na implementação de um sistema de **autenticação de usuários**.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +23,7 @@
   "dependencies": {
     "@prisma/client": "^6.16.2",
     "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2"
