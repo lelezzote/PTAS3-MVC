@@ -19,7 +19,7 @@ describe("Testes de autenticação", () => {
       .post("/usuario/cadastro")
       .send({
         nome: "teste",
-        email: "teste@exemplo.com",
+        email: "teste1@exemplo.com",
         senha: "abcd",
       });
 
@@ -31,7 +31,7 @@ describe("Testes de autenticação", () => {
     const res = await request(app)
       .post("/usuario/login")
       .send({
-        email: "teste@exemplo.com",
+        email: "teste1@exemplo.com",
         senha: "abcd",
       });
 
@@ -43,7 +43,7 @@ describe("Testes de autenticação", () => {
     const res = await request(app)
       .post("/usuario/login")
       .send({
-        email: "teste@exemplo.com",
+        email: "teste1@exemplo.com",
         senha: "senhaerrada",
       });
 
