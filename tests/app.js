@@ -1,10 +1,9 @@
 const express = require("express");
-const usuarioRoutes = require("./routes/usuarioRoutes");
+const usuarioRoutes = require("../routes/usuarioRoutes");
 
 const app = express();
 app.use(express.json());
 
-// Rotas
 app.use("/usuario", usuarioRoutes);
 app.get("/", (req, res) => res.send("Servidor funcionando"));
 
