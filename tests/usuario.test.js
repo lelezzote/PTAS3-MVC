@@ -6,7 +6,7 @@ test("POST /usuario/cadastro deve cadastrar usuário", async () => {
     .post("/usuario/cadastro")
     .send({ 
       nome: "verificar", 
-      email: "verificar12@email.com", 
+      email: "verificar123@email.com", 
       senha: "123"
      });
 
@@ -18,7 +18,7 @@ test("POST /usuario/login deve logar com sucesso", async () => {S
   const res = await request(app)
     .post("/usuario/login")
     .send({ 
-      email: "verificar12@email.com", 
+      email: "verificar123@email.com", 
       senha: "123" 
     });
 
@@ -31,7 +31,7 @@ test("POST /usuario/login deve falhar com senha incorreta", async () => {
   const res = await request(app)
     .post("/usuario/login")
     .send({ 
-      email: "verificar12@email.com", 
+      email: "verificar123@email.com", 
       senha: "incorreta" 
     });
 
@@ -43,7 +43,7 @@ test("POST /usuario/login deve falhar com usuário inexistente", async () => {
   const res = await request(app)
     .post("/usuario/login")
     .send({ 
-      email: "inexistente12@email.com", 
+      email: "inexistente123@email.com", 
       senha: "123" 
     });
 
