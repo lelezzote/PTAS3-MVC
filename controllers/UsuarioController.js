@@ -16,7 +16,7 @@ class UsuarioController {
       data: {
         nome,
         email,
-        senha: hashSenha,
+        password: hashSenha,
       },
     });
 
@@ -27,9 +27,9 @@ class UsuarioController {
 
   static async login(req, res) {
     try {
-      const { email, senha } = req.body;
+      const { email, password } = req.body;
 
-      if (!email || !senha) {
+      if (!email || !password) {
         return res.status(400).json({ msg: "Email e senha são obrigatórios!" });
       }
 
@@ -45,7 +45,7 @@ class UsuarioController {
       }
 
       // verifica se a senha está correta
-      const correto = await bcryptjs.compare(senha, usuario.senha);
+      const correto = await bcryptjs.compare(password, usuario.password);
       if (!correto) {
         return res.json({ 
             msg: "Senha incorreta!" 

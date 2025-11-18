@@ -7,7 +7,7 @@ test("POST /usuario/cadastro deve cadastrar usuário", async () => {
     .send({ 
       nome: "verificar", 
       email: "verificar123@email.com", 
-      senha: "123"
+      password: "123"
      });
 
   expect(res.status).toBe(200);
@@ -19,7 +19,7 @@ test("POST /usuario/login deve logar com sucesso", async () => {S
     .post("/usuario/login")
     .send({ 
       email: "verificar123@email.com", 
-      senha: "123" 
+      password: "123" 
     });
 
   expect(res.status).toBe(200);
@@ -32,7 +32,7 @@ test("POST /usuario/login deve falhar com senha incorreta", async () => {
     .post("/usuario/login")
     .send({ 
       email: "verificar123@email.com", 
-      senha: "incorreta" 
+      password: "incorreta" 
     });
 
   expect(res.status).toBe(200); 
@@ -44,7 +44,7 @@ test("POST /usuario/login deve falhar com usuário inexistente", async () => {
     .post("/usuario/login")
     .send({ 
       email: "inexistente123@email.com", 
-      senha: "123" 
+      password: "123" 
     });
 
   expect(res.status).toBe(200); 
